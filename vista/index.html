@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD PHP</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <script src="../js/all.js"></script>
+</head>
+
+<body>
+    <div class="container my-3">
+        <div class="card">
+            <div class="card-header bg-info">
+                <h3 class="text-white">Gestionar Personas</h3>
+            </div>
+
+            <div class="card-body">
+                <input type="hidden" name="" id="id">
+                <div class="row my-3">
+                    <div class="btn-group-sm">
+                        <button id="btn-consultar" class="btn btn-outline-info"> <i class="fa fa-search"></i>Consultar</button>
+                        <button id="btn-guardar" class="btn btn-outline-info"> <i class="fa fa-save"></i>Guardar</button>
+                        <button id="btn-modificar" class="btn btn-outline-info" disabled="true"> <i class="fa fa-pencil-alt"></i>Modificar</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre" autofocus>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <input class="form-control" type="text" name="apellido" id="apellido" placeholder="Ingrese su Apellido">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <input class="form-control" type="date" name="fechaNacimiento" id="fechaNacimiento" placeholder="Ingrese su Fecha de Nacimiento">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <input class="form-control" type="text" name="direccion" id="direccion" placeholder="Ingrese su Dirección">
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <input class="form-control" type="text" name="telefono" id="telefono" placeholder="Ingrese su Telefono">
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <table class="table table-striped" id="tabla-persona" data-page-length='5'>
+                    <thead>
+                        <tr>
+                            <td>Nombre</td>
+                            <td>Apellido</td>
+                            <td>Fecha de Nacimiento</td>
+                            <td>Direccion</td>
+                            <td>Telefono</td>
+                            <td>Acciones</td>
+                        </tr>
+                    </thead>
+                    <tbody id="datos">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/all.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="../js/persona.js"></script>
+</body>
+
+</html>
